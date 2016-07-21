@@ -1,5 +1,6 @@
 {
   "name": "pvdm-bootstrap",
+  "private": true,
   "version": "1.0.0",
   "description": "Custom bootstrap lib for Providigm projects",
   "main": "index.js",

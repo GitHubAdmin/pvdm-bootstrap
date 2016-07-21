@@ -4,9 +4,9 @@ var concat = require( 'gulp-concat' );
 var sass = require( 'gulp-sass' );
 var changed = require( 'gulp-changed' );
 var stripCssComments = require('gulp-strip-css-comments');
-var cssnano = require( "gulp-cssnano" );
-var rename = require( "gulp-rename" );
-var debug = require( "gulp-debug" );
+var cssnano = require( 'gulp-cssnano' );
+var rename = require( 'gulp-rename' );
+var debug = require( 'gulp-debug' );
 var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task( 'css', function(cb) {
@@ -34,7 +34,7 @@ gulp.task( 'css', function(cb) {
     .pipe( changed( './dist' ) )
     .pipe( concat( 'pvdm-bootstrap.css' ) )
     .pipe( gulp.dest( './dist' ) )
-    .pipe( stripCssComments( {preserve:false} ) )
+    .pipe( stripCssComments( {preserve: false} ) )
     .pipe( sourcemaps.init() )
     .pipe( cssnano() )
     .pipe( sourcemaps.write() )
